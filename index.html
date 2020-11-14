@@ -1,88 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Social Media Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Social Media Dashboard</title>
-</head>
-<body>
-  <div class="wrapper">
-  <header>
-    <div class="title">
-      <h1>Social Media Dashboard</h1>
-      <h4>Total Followers: 23,004</h4>
-    </div>
-    <div class="toggle">Dark Mode</div>
-  </header>
-  <main class="container">
-  <section>
-    <div class="social-card face">
-      <h2>@nathanf</h2>
-      <h3>1987</h3>
-      <h4>Followers</h4>
-      <p>12 Today</p>
-    </div>
-    <div class='social-card twitter'>
-      <h2>@nathanf</h2>
-      <h3>1044</h3>
-      <h4>Followers</h4>
-      <p>99 Today</p>
-    </div>
-    <div class="social-card instagram">
-      <h2>@realnathanf</h2>
-      <h3>11k</h3>
-      <h4>Followers</h4>
-      <p>1099 Today</p>
-    </div>
-    <div class="social-card youtube">
-      <h2>Nathan F.</h2>
-      <h3>8239</h3>
-      <h4>Subscribers</h4>
-      <p>144 Today</p>
-    </div>
-  </section>
-  </main>
-</div>
-  Overview - Today
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-grid">
+          <div>
+            <h1>Social Media Dashboard</h1>
+            <p class="total-followers">Total Followers: 23,004</p>
+          </div>
+          <div class="darkmode">
+            <p class="darkmode-title">Dark Mode</p>
+            <input class="checkbox" type="checkbox" id="checkbox" />
+            <label class="darkmode-switch" for="checkbox"></label>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  Page Views
-  87
-  3%
+    <!-- TOP CARDS -->
 
-  Likes
-  52
-  2%
+    <section class="top-cards">
+      <div class="wrapper">
+        <div class="grid">
+          <article class="card facebook">
+            <p class="card-title">
+              <img src="images/icon-facebook.svg" alt="Facebook Icon" />
+              @nathanf
+            </p>
+            <p class="card-followers-number">1987</p>
+            <p class="card-followers-title">Followers</p>
+            <p class="card-today">
+              <img src="images/icon-up.svg" alt="Up Icon" />
+              12 Today
+            </p>
+          </article>
+          <article class="card twitter">
+            <p class="card-title">
+              <img src="images/icon-twitter.svg" alt="Twitter Icon" />
+              @nathanf
+            </p>
+            <p class="card-followers-number">1044</p>
+            <p class="card-followers-title">Followers</p>
+            <p class="card-today">
+              <img src="images/icon-up.svg" alt="Up Icon" />
+              99 Today
+            </p>
+          </article>
+          <article class="card instagram">
+            <p class="card-title">
+              <img src="images/icon-instagram.svg" alt="Instagram Icon" />
+              @realnathanf
+            </p>
+            <p class="card-followers-number">11k</p>
+            <p class="card-followers-title">Followers</p>
+            <p class="card-today">
+              <img src="images/icon-up.svg" alt="Up Icon" />
+              1099 Today
+            </p>
+          </article>
+          <article class="card youtube">
+            <p class="card-title">
+              <img src="images/icon-youtube.svg" alt="Youtube Icon" />
+              Nathan F.
+            </p>
+            <p class="card-followers-number">8239</p>
+            <p class="card-followers-title">Followers</p>
+            <p class="card-today is-danger">
+              <img src="images/icon-down.svg" alt="Down Icon" />
+              144 Today
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  Likes
-  5462
-  2257%
+    <!--    OVERVIEWS   -->
 
-  Profile Views
-  52k
-  1375%
+    <section class="overview">
+      <div class="wrapper">
+        <h2>Overview - Today</h2>
+        <div class="grid">
+          <article class="small-cards">
+            <p class="views">Page Views</p>
+            <p class="social-icon">
+              <img src="/images/icon-facebook.svg" alt="Facebook Icon" />
+            </p>
+            <p class="views-number">87</p>
+            <p class="percent">
+              <img src="/images/icon-up.svg" alt="Up Icon" /> 3%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Likes</p>
+            <p class="social-icon">
+              <img src="/images/icon-facebook.svg" alt="Facebook Icon" />
+            </p>
+            <p class="views-number">52</p>
+            <p class="percent is-danger">
+              <img src="/images/icon-down.svg" alt="Down Icon" /> 3%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Likes</p>
+            <p class="social-icon">
+              <img src="/images/icon-instagram.svg" alt="Instagram Icon" />
+            </p>
+            <p class="views-number">5462</p>
+            <p class="percent">
+              <img src="/images/icon-up.svg" alt="Up Icon" /> 2257%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Profile Views</p>
+            <p class="social-icon">
+              <img src="/images/icon-instagram.svg" alt="Instagram Icon" />
+            </p>
+            <p class="views-number">52K</p>
+            <p class="percent">
+              <img src="/images/icon-up.svg" alt="Up Icon" /> 1375%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Retweets</p>
+            <p class="social-icon">
+              <img src="/images/icon-twitter.svg" alt="twitter Icon" />
+            </p>
+            <p class="views-number">117</p>
+            <p class="percent">
+              <img src="/images/icon-up.svg" alt="Up Icon" /> 303%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Likes</p>
+            <p class="social-icon">
+              <img src="/images/icon-twitter.svg" alt="twitter Icon" />
+            </p>
+            <p class="views-number">507</p>
+            <p class="percent">
+              <img src="/images/icon-up.svg" alt="Up Icon" /> 553%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Likes</p>
+            <p class="social-icon">
+              <img src="/images/icon-youtube.svg" alt="youtube Icon" />
+            </p>
+            <p class="views-number">107</p>
+            <p class="percent is-danger">
+              <img src="/images/icon-down.svg" alt="Down Icon" /> 19%
+            </p>
+          </article>
+          <article class="small-cards">
+            <p class="views">Total Views</p>
+            <p class="social-icon">
+              <img src="/images/icon-youtube.svg" alt="youtube Icon" />
+            </p>
+            <p class="views-number">1407</p>
+            <p class="percent is-danger">
+              <img src="/images/icon-down.svg" alt="Down Icon" /> 12%
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  Retweets
-  117
-  303%
+    <!--  FOOTER   -->
 
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="wrapper">
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://www.github.com/NeradoOne/" target="_blank"
+            >Marco De La Flor</a
+          >.
+        </div>
+      </div>
+    </footer>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
