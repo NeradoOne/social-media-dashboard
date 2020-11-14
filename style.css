@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root{
+  --bGPattern: hsl(225, 100%, 98%);
+  --cardBG: hsl(227, 47%, 96%);
+  --text: hsl(228, 12%, 44%);
+  --dText: hsl(230, 17%, 14%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youTube: hsl(348, 97%, 39%);
+
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+  width: 90%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+}
+body::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 34%;
+  background-color: var(--bGPattern);
+  z-index: -1;
+}
+main {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  /*max-width: 1440px;*/
+}
+section {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'face twitter insta youtube';
+  column-gap: .5em;
+}
+
+.social-card {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.2em;
+  text-align: center;
+  background-color: var(--cardBG);
+  border-radius: 5px;
+}
+.social-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.face {
+  grid-area: face;
+}
+.face::before {
+  background:var(--facebook);
+}
+.twitter {
+  grid-area: twitter;
+}
+.twitter::before {
+  background:var(--twitter);
+}
+.instagram{
+  grid-area: insta;
+  position: relative;
+}
+.instagram:before {
+  background:var(--instagram);
+}
+
+.youtube {
+  grid-area: youtube;
+}
+.youtube::before {
+  background:var(--youTube);
+}
